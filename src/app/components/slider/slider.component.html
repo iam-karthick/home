@@ -1,0 +1,60 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="example-sidenav">
+      <a mat-button id="fix" (click)="sidenav.close()"><i class="fa fa-times" aria-hidden="true"></i></a>
+      <mat-list>
+          <mat-card class="example-card">
+            <img mat-card-image class="img-thumb center" src="../../../assets/image/mypic.jpg" alt="Photo can't display">
+            <mat-card-title class="center"><b>karthick D</b></mat-card-title>
+            <mat-card-subtitle class="center"><p>dkarthickeee12@gmail.com</p></mat-card-subtitle>
+          </mat-card>
+          <mat-list-item>
+              <button mat-button (click)="sidenav.close()" routerLink="/" >Home</button>
+           </mat-list-item>
+          <mat-list-item>
+              <button mat-button [matMenuTriggerFor]="contant">Inside <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+              
+              <mat-menu #contant="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="about">About Me</button>
+                <button mat-menu-item [matMenuTriggerFor]="myworks">My Works</button>
+              </mat-menu>
+              
+              <mat-menu #about="matMenu">
+                <button mat-menu-item (click)="sidenav.close()" routerLink="/skills" >Skills</button>
+                <button mat-menu-item (click)="sidenav.close()" routerLink="/hobby" >Hobbys</button>
+                <button mat-menu-item [matMenuTriggerFor]="social">Social Media</button>
+              </mat-menu>
+          
+              <mat-menu #social="matMenu">
+                <mat-list>
+                  <mat-list-item><a href="https://www.linkedin.com/in/karthick-d-6042a613a" target="_blank" class=""><i class="fa fa-linkedin fa-lg"></i></a></mat-list-item>
+                  <mat-list-item><a href="https://www.meetup.com/members/223561428"><i class="fa fa-meetup fa-lg" aria-hidden="true"></i></a></mat-list-item>
+                  <mat-list-item><a href="https://github.com/iam-karthick" target="_blank" class=""><i class="fa fa-github fa-lg"></i></a></mat-list-item>
+                  <mat-list-item> <a href="https://plus.google.com"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a></mat-list-item>
+                  <mat-list-item> <a href="https://bitbucket.org/iam-karthick" target="_blank" class=""><i class="fa fa-bitbucket fa-lg"></i></a></mat-list-item>
+                  <mat-list-item><a href="http://javakarthiklog.blogspot.in"><i class="fa fa-rss fa-lg" aria-hidden="true"></i></a></mat-list-item>
+                </mat-list>
+              </mat-menu>
+
+              <mat-menu #myworks="matMenu">
+                <button mat-menu-item (click)="sidenav.close()" routerLink="/front" >Front end</button>
+                <button mat-menu-item (click)="sidenav.close()" routerLink="/back" >Back end</button>
+              </mat-menu>
+          </mat-list-item>
+          <mat-list-item>
+             <a mat-button href="http://javakarthiklog.blogspot.in">Blog</a>
+          </mat-list-item>
+        </mat-list>
+        
+    
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+      <button type="button" mat-button id="kind" (click)="sidenav.open()">
+          <i class="fa fa-bars fa-lg" aria-hidden="true"></i>          
+      </button>
+      <h2 class="center">iam karthick web developer</h2>      
+  </div>
+  
+ <router-outlet></router-outlet>
+ <app-get-touch></app-get-touch>
+</mat-sidenav-container>

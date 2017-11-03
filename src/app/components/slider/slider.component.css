@@ -1,0 +1,55 @@
+.example-container {
+    background-color: rgb(46, 45, 45);    
+    height:660px;
+  }
+  
+  .example-sidenav-content {
+      }
+  
+  .example-sidenav {
+    padding:1%;
+    background-color:#9C27B0;
+    color:white;
+  }
+  .mat-button{
+      color: white;
+  }
+#kind{
+    color:#E91E63
+}
+.img-thumb{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    padding: 10px 0px 0px 10px;
+    
+}
+#fix{
+    margin-left: 130px;
+}
+.center{
+    text-align: center;
+    color: white
+}
+.example-sidenav button,a{
+    margin-left: 30px;
+}
+.fa-github{
+    color: #1C1C1C;
+}
+.fa-bitbucket{
+    color:#21215C;
+}
+.fa-rss{
+    color: orange;
+}
+.fa-google-plus{
+    color: red;
+}
+.fa-meetup{
+    color: #F64B69;
+}
+.example-card{
+    background-color: #E91E63;
+    
+}

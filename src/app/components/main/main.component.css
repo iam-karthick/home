@@ -1,0 +1,11 @@
+#styles{
+    color:white;
+}
+.example-card{
+    background-color: rgb(70, 70, 70);
+    color: rgb(247, 245, 242);
+}
+.jedi{
+    color:#e91e63;
+    font-size: 20px;
+}
