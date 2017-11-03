@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule, MatButtonModule, MatMenuModule, MatListModule} from '@angular/material';
 import {MatCardModule, MatProgressSpinnerModule, MatGridListModule} from '@angular/material';
 import {MatTabsModule, MatExpansionModule} from '@angular/material';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -13,6 +14,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { HobbyComponent } from './components/hobby/hobby.component';
 import { FrontEndComponent } from './components/front-end/front-end.component';
 import { BackEndComponent } from './components/back-end/back-end.component';
+import { GithubService } from './components/github/github.service';
 
 import { route } from './app.routing';
 import { GetTouchComponent } from './components/get-touch/get-touch.component';
@@ -41,9 +43,10 @@ import { GetTouchComponent } from './components/get-touch/get-touch.component';
     MatProgressSpinnerModule,
     MatTabsModule,
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpModule
     ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

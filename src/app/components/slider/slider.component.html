@@ -3,7 +3,9 @@
       <a mat-button id="fix" (click)="sidenav.close()"><i class="fa fa-times" aria-hidden="true"></i></a>
       <mat-list>
           <mat-card class="example-card">
-            <img mat-card-image class="img-thumb center" src="../../../assets/image/mypic.jpg" alt="Photo can't display">
+              <div *ngIf="user">
+                  <img mat-card-image class="img-thumb center" src={{user.avatar_url}}  alt="Photo can't display">
+              </div>
             <mat-card-title class="center"><b>karthick D</b></mat-card-title>
             <mat-card-subtitle class="center"><p>dkarthickeee12@gmail.com</p></mat-card-subtitle>
           </mat-card>
@@ -49,7 +51,7 @@
   </mat-sidenav>
 
   <div class="example-sidenav-content">
-      <button type="button" mat-button id="kind" (click)="sidenav.open()">
+      <button type="button" mat-button id="kind"  (click)="onClick()" (click)="sidenav.open()">
           <i class="fa fa-bars fa-lg" aria-hidden="true"></i>          
       </button>
       <h2 class="center">iam karthick web developer</h2>      
